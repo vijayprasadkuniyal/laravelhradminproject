@@ -4044,6 +4044,7 @@ public function other_group_payment_done(Request $request)
     ->where('package_info.package_type', '!=', 'float')
     ->groupBy('package_info.group_id')
     ->paginate(10);
+    /////kkkkkkkkkkkk
 
     $total_sum = DB::connection('sales_db')->table('payment_history')
     ->leftJoin('package_info', 'package_info.package_id', '=', 'payment_history.package_id')
